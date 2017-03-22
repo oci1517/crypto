@@ -3,30 +3,46 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-#######################################
-Module 5 : Cryptographie
-#######################################
-
+###################################################
+Module 5 : Codage de l'information et cryptographie
+###################################################
 
 ..  only:: html
 
     ..  admonition:: Version PDF de ce chapitre
         :class: tip
 
-        *   :download:`files/crypto.pdf`
+        *   :download:`files/codage.pdf`
 
-Table des matières
-======================
+Cryptographie
+=============
 
 ..  toctree::
     :glob:
     :maxdepth: 1
 
-    intro
-    cesar
-    vigenere
-    rsa
-    refs
+    crypto/intro
+    crypto/cesar
+    crypto/vigenere
+    crypto/rsa
+    crypto/refs
+
+
+Codage de l'information
+=======================
+
+..  toctree::
+    :glob:
+    :maxdepth: 1
+
+    info/matos
+    info/int
+    info/signed_int
+    info/float
+    info/edc
+    info/ecc
+    info/compression
+    info/qr
 
 ..
     Indices and ref

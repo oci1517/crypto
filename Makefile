@@ -233,10 +233,10 @@ ssh-key-publish:
 	cat ~/.ssh/id_rsa.pub | ssh webpub@donner-online.ch 'cat >> ~/.ssh/authorized_keys'
 
 puthtml: cleanhtml html
-	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/crypto/ --progress --delete
+	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/codage/ --progress --delete
 
 putcorrige:
-	rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/crypto/corrige/ --progress --delete
+	rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/codage/corrige/ --progress --delete
 
 setup:
 	virtualenv --python=python3 venv

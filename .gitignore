@@ -1,7 +1,8 @@
 venv
 build
+.vscode
 
 __pycache__
 
 
-oci-info-theo.pdf
+*.pdf

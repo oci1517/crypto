@@ -3373,7 +3373,7 @@ copyfileobj	venv/lib/python3.4/tarfile.py	/^def copyfileobj(src, dst, length=Non
 copymode	venv/lib/python3.4/shutil.py	/^def copymode(src, dst, *, follow_symlinks=True):$/;"	kind:function	line:113
 copyreg	venv/lib/python3.4/re.py	/^import copyreg$/;"	kind:namespace	line:336
 copyreg.py	venv/lib/python3.4/copyreg.py	1;"	kind:file	line:1
-copyright	source/conf.py	/^copyright = u'avril 2016, Cédric Donner'$/;"	kind:variable	line:53
+copyright	source/conf.py	/^copyright = u'Mars 2017, Cédric Donner'$/;"	kind:variable	line:53
 copystat	venv/lib/python3.4/shutil.py	/^def copystat(src, dst, *, follow_symlinks=True):$/;"	kind:function	line:161
 copytree	venv/lib/python3.4/shutil.py	/^def copytree(src, dst, symlinks=False, ignore=None, copy_function=copy2,$/;"	kind:function	line:261
 count	venv/lib/python3.4/_collections_abc.py	/^    def count(self, value):$/;"	kind:member	line:659
@@ -5015,7 +5015,7 @@ prepstyle	venv/bin/rst2odt_prepstyles.py	/^def prepstyle(filename):$/;"	kind:fun
 prev_sys_path	venv/bin/activate_this.py	/^prev_sys_path = list(sys.path)$/;"	kind:variable	line:23
 prf	venv/lib/python3.4/hashlib.py	/^        def prf(msg, inner=inner, outer=outer):$/;"	kind:function	line:173
 print_function	venv/lib/python3.4/__future__.py	/^print_function = _Feature((2, 6, 0, "alpha", 2),$/;"	kind:variable	line:124
-project	source/conf.py	/^project = u'Informatique théorique'$/;"	kind:variable	line:52
+project	source/conf.py	/^project = u'Codage de l\\'information et cryptographie'$/;"	kind:variable	line:52
 ptcp154.py	venv/lib/python3.4/encodings/ptcp154.py	1;"	kind:file	line:1
 publish_cmdline	venv/bin/rst2html.py	/^from docutils.core import publish_cmdline, default_description$/;"	kind:namespace	line:17
 publish_cmdline	venv/bin/rst2latex.py	/^from docutils.core import publish_cmdline$/;"	kind:namespace	line:17

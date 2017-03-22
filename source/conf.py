@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Cryptographie'
+project = u'Codage de l\'information et cryptographie'
 copyright = u'Mars 2017, Cédric Donner'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -197,7 +197,7 @@ latex_elements = {
    'papersize':"a4",
    'author': "Cédric Donner",
    'date': "Mars 2017",
-   'title': "Cryptographie",
+   'title': "Codage de l'information et cryptographie",
    'release' : "",
    'releasename' : "CSUD, Option complémentaire informatique",
    'fontpkg': '\\usepackage{times}',
@@ -208,7 +208,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'crypto.tex', u'Cryptographie',
+  ('index', 'codage.tex', u'Codage de l\'information et cryptographie',
    u'Cédric Donner', 'manual'),
 ]
 
