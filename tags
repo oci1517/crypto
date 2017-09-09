@@ -2927,6 +2927,7 @@ alive	venv/lib/python3.4/weakref.py	/^    def alive(self):$/;"	kind:member	line:
 all_feature_names	venv/lib/python3.4/__future__.py	/^all_feature_names = [$/;"	kind:variable	line:50
 all_suffixes	venv/lib/python3.4/importlib/machinery.py	/^def all_suffixes():$/;"	kind:function	line:19
 allocate_lock	venv/lib/python3.4/_dummy_thread.py	/^def allocate_lock():$/;"	kind:function	line:74
+alphabet	source/crypto/corriges/encode_vigenere.py	/^alphabet = string.ascii_uppercase + " "$/;"	kind:variable	line:3
 altsep	venv/lib/python3.4/ntpath.py	/^altsep = '\/'$/;"	kind:variable	line:29
 altsep	venv/lib/python3.4/os.py	/^from os.path import (curdir, pardir, sep, pathsep, defpath, extsep, altsep,$/;"	kind:namespace	line:109
 altsep	venv/lib/python3.4/posixpath.py	/^altsep = None$/;"	kind:variable	line:35
@@ -2995,6 +2996,7 @@ blocksize	venv/lib/python3.4/hmac.py	/^    blocksize = 64  # 512-bit HMAC; can b
 bltn_open	venv/lib/python3.4/tarfile.py	/^bltn_open = open$/;"	kind:variable	line:2424
 bootstrap	venv/lib/python3.4/importlib/_bootstrap.py	/^    import tokenize  # To avoid bootstrap issues.$/;"	kind:namespace	line:681
 bootstrap_theme_options.py	modules/bootstrap_theme_options.py	1;"	kind:file	line:1
+brute_force	source/crypto/corriges/decode_cesar.py	/^def brute_force(encrypted):$/;"	kind:function	line:27
 build_ext	venv/lib/python3.4/distutils/__init__.py	/^    class build_ext(old_build_ext):$/;"	kind:class	line:37
 build_ext_module	venv/lib/python3.4/distutils/__init__.py	/^    from distutils.command import build_ext as build_ext_module $/;"	kind:namespace	line:47
 builtin	venv/lib/python3.4/importlib/__init__.py	/^import _imp  # Just the builtin component, NOT the full Python module$/;"	kind:namespace	line:12
@@ -3072,6 +3074,7 @@ clear	venv/lib/python3.4/collections/__init__.py	/^    def clear(self):$/;"	kind
 clear	venv/lib/python3.4/collections/__init__.py	/^    def clear(self):$/;"	kind:member	line:884
 clear_extension_cache	venv/lib/python3.4/copyreg.py	/^def clear_extension_cache():$/;"	kind:function	line:188
 clearcache	venv/lib/python3.4/linecache.py	/^def clearcache():$/;"	kind:function	line:27
+clever_cesar_decrypt	source/crypto/corriges/decode_cesar.py	/^def clever_cesar_decrypt(encrypted):$/;"	kind:function	line:54
 close	venv/lib/python3.4/os.py	/^    def close(self):$/;"	kind:member	line:957
 close	venv/lib/python3.4/tarfile.py	/^    def close(self):$/;"	kind:member	line:1700
 close	venv/lib/python3.4/tarfile.py	/^    def close(self):$/;"	kind:member	line:317
@@ -3659,6 +3662,8 @@ decode	venv/lib/python3.4/encodings/uu_codec.py	/^    def decode(self, input, fi
 decode	venv/lib/python3.4/encodings/zlib_codec.py	/^    def decode(self, input, errors='strict'):$/;"	kind:member	line:24
 decode	venv/lib/python3.4/encodings/zlib_codec.py	/^    def decode(self, input, final=False):$/;"	kind:member	line:49
 decode	venv/lib/python3.4/os.py	/^        def decode(value):$/;"	kind:function	line:708
+decode_cesar	source/crypto/corriges/decode_cesar.py	/^def decode_cesar(text, key):$/;"	kind:function	line:12
+decode_cesar.py	source/crypto/corriges/decode_cesar.py	1;"	kind:file	line:1
 decode_generalized_number	venv/lib/python3.4/encodings/punycode.py	/^def decode_generalized_number(extended, extpos, bias, errors):$/;"	kind:function	line:127
 decode_source	venv/lib/python3.4/importlib/_bootstrap.py	/^def decode_source(source_bytes):$/;"	kind:function	line:676
 decode_source	venv/lib/python3.4/importlib/util.py	/^from ._bootstrap import decode_source$/;"	kind:namespace	line:5
@@ -3820,6 +3825,8 @@ dump	venv/lib/python3.4/sre_constants.py	/^    def dump(f, d, prefix):$/;"	kind:
 dump	venv/lib/python3.4/sre_parse.py	/^    def dump(self, level=0):$/;"	kind:member	line:96
 dumps	venv/lib/python3.4/collections/__main__.py	/^from pickle import loads, dumps$/;"	kind:namespace	line:7
 elements	venv/lib/python3.4/collections/__init__.py	/^    def elements(self):$/;"	kind:member	line:495
+encode	source/crypto/corriges/encode_vigenere.py	/^def encode(text):$/;"	kind:function	line:5
+encode	source/crypto/corriges/rsa_encode.py	/^def encode(text):$/;"	kind:function	line:3
 encode	venv/lib/python3.4/base64.py	/^def encode(input, output):$/;"	kind:function	line:493
 encode	venv/lib/python3.4/codecs.py	/^    def encode(self, input, errors='strict'):$/;"	kind:member	line:135
 encode	venv/lib/python3.4/codecs.py	/^    def encode(self, input, final=False):$/;"	kind:member	line:194
@@ -4055,6 +4062,7 @@ encode	venv/lib/python3.4/encodings/uu_codec.py	/^    def encode(self, input, fi
 encode	venv/lib/python3.4/encodings/zlib_codec.py	/^    def encode(self, input, errors='strict'):$/;"	kind:member	line:22
 encode	venv/lib/python3.4/encodings/zlib_codec.py	/^    def encode(self, input, final=False):$/;"	kind:member	line:33
 encode	venv/lib/python3.4/os.py	/^        def encode(value):$/;"	kind:function	line:704
+encode_vigenere.py	source/crypto/corriges/encode_vigenere.py	1;"	kind:file	line:1
 encodebytes	venv/lib/python3.4/base64.py	/^def encodebytes(s):$/;"	kind:function	line:533
 encodekey	venv/lib/python3.4/os.py	/^        def encodekey(key):$/;"	kind:function	line:696
 encodestring	venv/lib/python3.4/base64.py	/^def encodestring(s):$/;"	kind:function	line:543
@@ -4134,6 +4142,7 @@ encodings	venv/lib/python3.4/codecs.py	/^    import encodings$/;"	kind:namespace
 encodings	venv/lib/python3.4/locale.py	/^import encodings$/;"	kind:namespace	line:15
 encodings	venv/lib/python3.4/locale.py	/^import encodings.aliases$/;"	kind:namespace	line:16
 encodings	venv/lib/python3.4/site.py	/^                import encodings$/;"	kind:namespace	line:521
+encrypted	source/crypto/corriges/decode_cesar.py	/^        encrypted = fd.read()$/;"	kind:variable	line:72
 endpats	venv/lib/python3.4/tokenize.py	/^endpats = {"'": Single, '"': Double,$/;"	kind:variable	line:173
 endswith	venv/lib/python3.4/collections/__init__.py	/^    def endswith(self, suffix, start=0, end=_sys.maxsize):$/;"	kind:member	line:1096
 environ	venv/lib/python3.4/os.py	/^    environ = {}$/;"	kind:variable	line:484
@@ -4191,6 +4200,10 @@ extsep	venv/lib/python3.4/ntpath.py	/^extsep = '.'$/;"	kind:variable	line:26
 extsep	venv/lib/python3.4/os.py	/^from os.path import (curdir, pardir, sep, pathsep, defpath, extsep, altsep,$/;"	kind:namespace	line:109
 extsep	venv/lib/python3.4/posixpath.py	/^extsep = '.'$/;"	kind:variable	line:31
 f	venv/lib/python3.4/sre_constants.py	/^    f = open("sre_constants.h", "w")$/;"	kind:variable	line:223
+fInp	source/crypto/corriges/encode_vigenere.py	/^fInp = open("original.txt")$/;"	kind:variable	line:21
+fInp	source/crypto/corriges/rsa_encode.py	/^fInp = open("original.txt")$/;"	kind:variable	line:13
+fOut	source/crypto/corriges/encode_vigenere.py	/^fOut = open("secret.txt", "w")$/;"	kind:variable	line:29
+fOut	source/crypto/corriges/rsa_encode.py	/^fOut = open("secret.txt", "w")    $/;"	kind:variable	line:21
 fdopen	venv/lib/python3.4/os.py	/^def fdopen(fd, *args, **kwargs):$/;"	kind:function	line:976
 file	venv/lib/python3.4/tempfile.py	/^    file = None  # Set here since __del__ checks it$/;"	kind:variable	line:339
 file_encoding	venv/lib/python3.4/codecs.py	/^    file_encoding = 'unknown'$/;"	kind:variable	line:766
@@ -4504,6 +4517,7 @@ global_matches	venv/lib/python3.4/rlcompleter.py	/^    def global_matches(self, 
 group	venv/lib/python3.4/tokenize.py	/^def group(*choices): return '(' + '|'.join(choices) + ')'$/;"	kind:function	line:109
 grp	venv/lib/python3.4/tarfile.py	/^    import grp, pwd$/;"	kind:namespace	line:52
 gt	venv/lib/python3.4/operator.py	/^def gt(a, b):$/;"	kind:function	line:47
+guess_key	source/crypto/corriges/decode_cesar.py	/^def guess_key(text):$/;"	kind:function	line:38
 gzip	venv/lib/python3.4/tarfile.py	/^            import gzip$/;"	kind:namespace	line:1607
 gzopen	venv/lib/python3.4/tarfile.py	/^    def gzopen(cls, name, mode="r", fileobj=None, compresslevel=9, **kwargs):$/;"	kind:member	line:1599
 has_deadlock	venv/lib/python3.4/importlib/_bootstrap.py	/^    def has_deadlock(self):$/;"	kind:member	line:180
@@ -4693,6 +4707,7 @@ join	venv/lib/python3.4/ntpath.py	/^def join(path, *paths):$/;"	kind:function	li
 join	venv/lib/python3.4/posixpath.py	/^def join(a, *p):$/;"	kind:function	line:70
 joinuser	venv/lib/python3.4/site.py	/^    def joinuser(*args):$/;"	kind:function	line:324
 k	venv/lib/python3.4/locale.py	/^    k = k.replace('_', '')$/;"	kind:variable	line:709
+key	source/crypto/corriges/encode_vigenere.py	/^key = "ALICE"$/;"	kind:variable	line:2
 keyrefs	venv/lib/python3.4/weakref.py	/^    def keyrefs(self):$/;"	kind:member	line:418
 keys	venv/lib/python3.4/_collections_abc.py	/^    def keys(self):$/;"	kind:member	line:434
 keys	venv/lib/python3.4/collections/__init__.py	/^    keys = MutableMapping.keys$/;"	kind:variable	line:169
@@ -4702,6 +4717,8 @@ keyword	venv/lib/python3.4/rlcompleter.py	/^        import keyword$/;"	kind:name
 keyword.py	venv/lib/python3.4/keyword.py	1;"	kind:file	line:1
 koi8_r.py	venv/lib/python3.4/encodings/koi8_r.py	1;"	kind:file	line:1
 koi8_u.py	venv/lib/python3.4/encodings/koi8_u.py	1;"	kind:file	line:1
+krypto	source/crypto/corriges/encode_vigenere.py	/^krypto = encode(text)$/;"	kind:variable	line:26
+krypto	source/crypto/corriges/rsa_encode.py	/^krypto = encode(text)$/;"	kind:variable	line:18
 kwlist	venv/lib/python3.4/keyword.py	/^kwlist = [$/;"	kind:variable	line:15
 language	source/conf.py	/^language = "fr"$/;"	kind:variable	line:66
 latex_documents	source/conf.py	/^latex_documents = [$/;"	kind:variable	line:210
@@ -5017,6 +5034,7 @@ prf	venv/lib/python3.4/hashlib.py	/^        def prf(msg, inner=inner, outer=oute
 print_function	venv/lib/python3.4/__future__.py	/^print_function = _Feature((2, 6, 0, "alpha", 2),$/;"	kind:variable	line:124
 project	source/conf.py	/^project = u'Codage de l\\'information et cryptographie'$/;"	kind:variable	line:52
 ptcp154.py	venv/lib/python3.4/encodings/ptcp154.py	1;"	kind:file	line:1
+publicKey	source/crypto/corriges/rsa_encode.py	/^publicKey = [97213511, 6551]$/;"	kind:variable	line:1
 publish_cmdline	venv/bin/rst2html.py	/^from docutils.core import publish_cmdline, default_description$/;"	kind:namespace	line:17
 publish_cmdline	venv/bin/rst2latex.py	/^from docutils.core import publish_cmdline$/;"	kind:namespace	line:17
 publish_cmdline	venv/bin/rst2man.py	/^from docutils.core import publish_cmdline, default_description$/;"	kind:namespace	line:21
@@ -5177,6 +5195,7 @@ rot13	venv/lib/python3.4/encodings/rot_13.py	/^def rot13(infile, outfile):$/;"	k
 rot13_map	venv/lib/python3.4/encodings/rot_13.py	/^rot13_map = codecs.make_identity_dict(range(256))$/;"	kind:variable	line:50
 rot_13.py	venv/lib/python3.4/encodings/rot_13.py	1;"	kind:file	line:1
 rpartition	venv/lib/python3.4/collections/__init__.py	/^    def rpartition(self, sep):$/;"	kind:member	line:1139
+rsa_encode.py	source/crypto/corriges/rsa_encode.py	1;"	kind:file	line:1
 rshift	venv/lib/python3.4/operator.py	/^def rshift(a, b):$/;"	kind:function	line:124
 rsplit	venv/lib/python3.4/collections/__init__.py	/^    def rsplit(self, sep=None, maxsplit=-1):$/;"	kind:member	line:1145
 rst2html.py	venv/bin/rst2html.py	1;"	kind:file	line:1
@@ -5335,6 +5354,8 @@ str_iterator	venv/lib/python3.4/_collections_abc.py	/^str_iterator = type(iter("
 strcoll	venv/lib/python3.4/locale.py	/^    strcoll = _strcoll$/;"	kind:variable	line:100
 strict_errors	venv/lib/python3.4/codecs.py	/^    strict_errors = None$/;"	kind:variable	line:1085
 strict_errors	venv/lib/python3.4/codecs.py	/^    strict_errors = lookup_error("strict")$/;"	kind:variable	line:1078
+string	source/crypto/corriges/decode_cesar.py	/^import string$/;"	kind:namespace	line:7
+string	source/crypto/corriges/encode_vigenere.py	/^import string$/;"	kind:namespace	line:1
 string	venv/lib/python3.4/ntpath.py	/^        import string$/;"	kind:namespace	line:374
 string	venv/lib/python3.4/ntpath.py	/^        import string$/;"	kind:namespace	line:384
 stringprep	venv/lib/python3.4/encodings/idna.py	/^import stringprep, re, codecs$/;"	kind:namespace	line:3
@@ -5421,6 +5442,8 @@ template	venv/lib/python3.4/re.py	/^def template(pattern, flags=0):$/;"	kind:fun
 template	venv/lib/python3.4/tempfile.py	/^template = "tmp"$/;"	kind:variable	line:60
 templates_path	source/conf.py	/^templates_path = ['_templates']$/;"	kind:variable	line:40
 test	venv/lib/python3.4/base64.py	/^def test():$/;"	kind:function	line:591
+text	source/crypto/corriges/encode_vigenere.py	/^text = fInp.read()$/;"	kind:variable	line:22
+text	source/crypto/corriges/rsa_encode.py	/^text = fInp.read()$/;"	kind:variable	line:14
 textwrap	venv/lib/python3.4/site.py	/^        import textwrap$/;"	kind:namespace	line:753
 the	venv/lib/python3.4/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	kind:namespace	line:5
 the	venv/lib/python3.4/encodings/bz2_codec.py	/^import bz2 # this codec needs the optional bz2 module !$/;"	kind:namespace	line:11

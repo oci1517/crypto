@@ -64,7 +64,7 @@ constitue déjà la clé publique:
 Exemple
 =======
 
-Voici un exemple de calcul de la clé publique pour les petits nombres premiers :math:`p = 73` et :math:`q = 15` :
+Voici un exemple de calcul de la clé publique pour les petits nombres premiers :math:`p = 73` et :math:`q = 151` :
 
     *   :math:`m = 73 \cdot  151 = 11023`
     *   :math:`\phi = 72 \cdot  150 = 10800`
@@ -136,33 +136,15 @@ crypté à l’aide de la clé publique ``[m, s]`` selon la formule
 Le programme suivant écrit chacun des caractères encodés sur une nouvelle ligne
 dans le fichier ``secret.txt``.
 
-..  code-block:: python
+..  literalinclude:: corriges/rsa_encode.py
     :linenos:
+    :language: python
 
-    publicKey = [11023, 11]
+..  admonition:: Version exécutable sur REPL.it
+    :class: tip
 
-    def encode(text):
-        m = publicKey[0]
-        e = publicKey[1]
-        enc = ""
-        for ch in text:
-            r = ord(ch)
-            s = int(r**e % m)
-            enc += str(s) + "\n"
-        return enc
+    https://repl.it/H1Qo/10
 
-    fInp = open("original.txt")
-    text = fInp.read()
-    fInp.close() 
-
-    print "Original:\n", text
-    krypto = encode(text)
-    print "Krypto:\n", krypto
-
-    fOut = open("secret.txt", "w")
-    for ch in krypto:
-        fOut.write(ch)
-    fOut.close()
 
 Le décodeur commence par charger ligne à ligne les nombres présents dans le
 fichier ``secret.txt`` pour les stocker dans une liste. Pour chacun des nombres
@@ -175,40 +157,16 @@ privée :math:`s` selon la formule
 
 Ce nombre correspond au code ASCII du caractère original.
 
-..  code-block:: python
+..  literalinclude:: corriges/rsa_decode.py
     :linenos:
-        
-    privateKey = [11023, 5891]
+    :language: python
 
-    def decode(li):
-        m = privateKey[0]
-        d = privateKey[1]
-        enc = ""
-        for c in li:
-            s = int(c)
-            r = s**d % m
-            enc += chr(r)
-        return enc
 
-    fInp = open("secret.txt")
-    krypto = []
-    while True:
-    line = fInp.readline().rstrip("\n")
-    if line == "":
-        break
-    krypto.append(line)
-    fInp.close() 
+..  admonition:: Version exécutable sur REPL.it
+    :class: tip
+    
+    https://repl.it/H1VN/4  
 
-    print "Krypto:\n", krypto
-    msg = decode(krypto)
-    print "Message:\n", msg
-
-    fOut = open("message.txt", "w")    
-    for ch in msg:
-        fOut.write(ch)
-    fOut.close()    
- 
-  	 
   	
 	
 ..  admonition:: Memento
@@ -281,6 +239,46 @@ ci-dessus.
     ``pycrypto`` (https://pypi.python.org/pypi/pycrypto).
 
 
+Performances
+------------
+
+L'implémentation des fonctions ``encode(message)`` et ``decode(numbers)`` donnée
+plus haut est très inefficace dès que la taille de la clé devient grande. Cela
+vient du fait que l'opération
+
+::
+
+    r ** e % maison
+
+est très coûteuse à cause de l'opérateur ``**`` qui n'est pas adapté. Vous
+pouvez faire le test dans une console Python et essayer de faire
+
+::
+
+    2457234582345 ** 2459823467234
+
+Vous constaterez qu'il faut un temps absolument astronomique pour faire cette
+exponentiation. Cela vient du fait que les nombres sont très grands et ne
+peuvent pas être stockés en une seule fois dans les registres du CPU. De ce
+fait, pour une simple multiplication, il faut parfois des milliers d'allers
+retours entre le CPU et la mémoire. Pour éviter ce problème, il faut faire de
+l'exponentiation modulaire en utilisant le fait que 
+
+..  math::
+
+    a \equiv a' \pmod m \text{ et } b \equiv b'  \pmod m  \iff ab \equiv a'b'  \pmod m 
+
+Il existe une fonction intégrée à Python permettant d'effectuer l'exponentiation
+modulaire. Il s'agit de la fonction ``pow(a, b, m)`` qui est équivalente à ``a
+** b % m`` mais qui est extrêmement plus rapide.
+
+..  tip::
+
+    Pour plus d'informations concernant l'exponentiation modulaire rapide,
+    consulter la page Wikipedia
+    https://fr.wikipedia.org/wiki/Exponentiation_modulaire
+
+
 Exercices
 =========
 
@@ -298,6 +296,18 @@ Exercices
     implémenté lui-même son algorithme RSA en utilisant des nombres premiers trop
     petits pour générer sa paire de clés. Aidez Alice à retrouver la clé privée de
     Bob et à décoder le message suivant qui a été encodé avec cette clé publique :
+
+    ..  only:: prof
+
+        Programme pour trouver la clé privée : https://repl.it/H14F/21
+        Programme de décodage rapide : https://repl.it/H1VN/12
+
+    ..  tip::
+
+        N'oubliez pas de modifier la fonction de décodage ``decode`` pour
+        qu'elle utilise l'exonentiation modulaire rapide (cf. dans les
+        compléments), sans quoi il est impossible de décoder le message à cause
+        du temps de calcul, même avec la clé privée.
 
     ..  only:: html
 

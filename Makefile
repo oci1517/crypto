@@ -73,11 +73,11 @@ cleanhtml:
 
 html:
 	cp -f $(BUILDDIR)/latex/*.pdf source/files | true
-	$(SPHINXBUILD) -b html -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 encours:
-	$(SPHINXBUILD) -b html -t encours $(ALLSPHINXOPTS) $(BUILDDIR)/encours
+	$(SPHINXBUILD) -b html -t encours -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/encours
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/encours."
 corrige:
@@ -229,6 +229,7 @@ livehtml: encours
 	@echo Serving pages on $(SPHINX_URL)
 	sphinx-autobuild -b html -t encours -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/html --port=$(SPHINX_PORT) --host=$(SPHINX_HOST) > /dev/null
 
+
 ssh-key-publish:
 	cat ~/.ssh/id_rsa.pub | ssh webpub@donner-online.ch 'cat >> ~/.ssh/authorized_keys'
 
@@ -236,7 +237,7 @@ puthtml: cleanhtml html
 	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/codage/ --progress --delete
 
 putcorrige:
-	rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/codage/corrige/ --progress --delete
+	rsync -raz build/corrige/* webpub@donner-online.ch:/home/webpub/html/oci/codage/corrige/ --progress --delete
 
 setup:
 	virtualenv --python=python3 venv
@@ -244,4 +245,7 @@ setup:
 youtube-patch:
 	curl https://gist.githubusercontent.com/donnerc/2df4c5daea4c2b92312dec524bb00194/raw/b412c7424e4635f816f9a2f95cdd2095b476b7ec/youtube.py > venv/lib/python3.4/site-packages/sphinxcontrib/youtube/youtube.py
 
-deploy: latexpdf puthtml
+deploy: puthtml putcorrige
+
+ssh:
+	ssh webpub@donner-online.ch

@@ -35,14 +35,24 @@ Codage de l'information
     :glob:
     :maxdepth: 1
 
-    info/matos
-    info/int
-    info/signed_int
-    info/float
-    info/edc
-    info/ecc
-    info/compression
-    info/qr
+    codage/matos
+    codage/int
+    codage/signed_int
+    codage/float
+    codage/bit_operators
+    codage/edc
+    codage/ecc
+    codage/compression
+    codage/qr
+
+Examen pratique
+===============
+
+..  toctree::
+    :glob:
+    :maxdepth: 1
+
+    eval/index
 
 ..
     Indices and ref

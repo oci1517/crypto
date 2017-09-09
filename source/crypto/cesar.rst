@@ -162,7 +162,17 @@ de la clé trouvée.
 
     https://en.wikipedia.org/wiki/Letter_frequency
 
-::
+
+..  only:: corrige
+
+    ..  admonition:: Corrigé des exercices 1 et 2
+        :class: warning
+
+        ..  literalinclude:: corriges/decode_cesar.py
+            :language: python
+            :linenos:
+
+
 
 
 ..  comment::
